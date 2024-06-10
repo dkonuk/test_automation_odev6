@@ -16,7 +16,6 @@ public class repeating_Letters {
         for (String word : kelime_listesi) {
             ArrayList<String> letters = new ArrayList<String>();
 
-            boolean containsDuplicate = false;
             for (int i = 0; i < word.length(); i++) {
                 int duplicate_size = duplicate.size();
 
@@ -24,7 +23,6 @@ public class repeating_Letters {
                     if (duplicate_size >= 2) {
                 break;
             }
-                    containsDuplicate = true;
                     duplicate.add(word);
                     break;
 
@@ -56,7 +54,7 @@ public class repeating_Letters {
         int range = max - min + 1;
         StringBuilder newWord = new StringBuilder();
 
-        // generate random numbers within 1 to 10
+
         for (int i = 0; i < 6; i++) {
             int rand = (int)(Math.random() * range) + min;
             newWord.append(duplicate_Letters.get(rand-1));
